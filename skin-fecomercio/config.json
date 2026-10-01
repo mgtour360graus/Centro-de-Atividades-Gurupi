@@ -1,5 +1,5 @@
 {
-  "version": "4.3.2-centro-atividades-gurupi-2026-10-01",
+  "version": "4.3.3-centro-atividades-gurupi-2026-10-01",
   "brand": {
     "systemName": "SISTEMA FECOMÉRCIO",
     "tourName": "Centro de Atividades Sesc Gurupi - Tocantins - TOUR 360°",
@@ -53,13 +53,8 @@
       "surface": "#DDF2FF",
       "destinations": [
         { "label": "Vista aérea panorâmica", "index": 0 },
-        { "label": "Vista aérea do complexo", "index": 1 },
         { "label": "Fachada principal", "index": 2 },
-        { "label": "Hall de entrada — vista 1", "index": 43 },
-        { "label": "Hall de entrada — vista 2", "index": 44 },
-        { "label": "Hall de entrada — vista 3", "index": 45 },
-        { "label": "Hall de entrada — vista 4", "index": 46 },
-        { "label": "Hall de entrada — vista 5", "index": 47 },
+        { "label": "Hall de entrada", "index": 43 },
         { "label": "Recepção", "index": 50 }
       ]
     },
@@ -73,21 +68,8 @@
       "accent": "#12A7BB",
       "surface": "#DDFBFF",
       "destinations": [
-        { "label": "Academia — vista 1", "index": 3 },
-        { "label": "Academia — vista 2", "index": 4 },
-        { "label": "Academia — vista 3", "index": 5 },
-        { "label": "Academia — vista 4", "index": 6 },
-        { "label": "Academia — vista 5", "index": 7 },
-        { "label": "Academia — vista 6", "index": 8 },
-        { "label": "Academia — vista 7", "index": 9 },
-        { "label": "Academia — vista 8", "index": 10 },
-        { "label": "Academia — vista 9", "index": 11 },
-        { "label": "Academia — vista 10", "index": 12 },
-        { "label": "Academia — vista 11", "index": 13 },
-        { "label": "Academia — vista 12", "index": 14 },
-        { "label": "Academia — vista 13", "index": 15 },
-        { "label": "Pilates — vista 1", "index": 48 },
-        { "label": "Pilates — vista 2", "index": 49 }
+        { "label": "Academia", "index": 3 },
+        { "label": "Pilates", "index": 48 }
       ]
     },
     {
@@ -100,27 +82,9 @@
       "accent": "#E88715",
       "surface": "#FFF1DD",
       "destinations": [
-        { "label": "Biblioteca — vista 1", "index": 16 },
-        { "label": "Biblioteca — vista 2", "index": 17 },
-        { "label": "Biblioteca — vista 3", "index": 18 },
-        { "label": "Biblioteca — vista 4", "index": 19 },
-        { "label": "Cineteatro — vista 1", "index": 23 },
-        { "label": "Cineteatro — vista 2", "index": 24 },
-        { "label": "Cineteatro — vista 3", "index": 25 },
-        { "label": "Cineteatro — vista 4", "index": 26 },
-        { "label": "Cineteatro — vista 5", "index": 27 },
-        { "label": "Cineteatro — vista 6", "index": 28 },
-        { "label": "Cineteatro — vista 7", "index": 29 },
-        { "label": "Cineteatro — vista 8", "index": 30 },
-        { "label": "Cineteatro — vista 9", "index": 31 },
-        { "label": "Cineteatro — vista 10", "index": 32 },
-        { "label": "Galeria de arte — vista 1", "index": 33 },
-        { "label": "Galeria de arte — vista 2", "index": 34 },
-        { "label": "Galeria de arte — vista 3", "index": 35 },
-        { "label": "Galeria de arte — vista 4", "index": 36 },
-        { "label": "Galeria de arte — vista 5", "index": 37 },
-        { "label": "Galeria de arte — vista 6", "index": 38 },
-        { "label": "Galeria de arte — vista 7", "index": 39 }
+        { "label": "Biblioteca", "index": 16 },
+        { "label": "Cineteatro", "index": 23 },
+        { "label": "Galeria de arte", "index": 33 }
       ]
     },
     {
@@ -133,12 +97,8 @@
       "accent": "#43A047",
       "surface": "#E4F8E7",
       "destinations": [
-        { "label": "Campo de futebol — vista 1", "index": 20 },
-        { "label": "Campo de futebol — vista 2", "index": 21 },
-        { "label": "Campo de futebol — vista 3", "index": 22 },
-        { "label": "Ginásio — vista 1", "index": 40 },
-        { "label": "Ginásio — vista 2", "index": 41 },
-        { "label": "Ginásio — vista 3", "index": 42 }
+        { "label": "Campo de futebol", "index": 20 },
+        { "label": "Ginásio", "index": 40 }
       ]
     },
     {
@@ -151,15 +111,7 @@
       "accent": "#DBA900",
       "surface": "#FFF9D8",
       "destinations": [
-        { "label": "Restaurante — vista 1", "index": 51 },
-        { "label": "Restaurante — vista 2", "index": 52 },
-        { "label": "Restaurante — vista 3", "index": 53 },
-        { "label": "Restaurante — vista 4", "index": 54 },
-        { "label": "Restaurante — vista 5", "index": 55 },
-        { "label": "Restaurante — vista 6", "index": 56 },
-        { "label": "Restaurante — vista 7", "index": 57 },
-        { "label": "Restaurante — vista 8", "index": 58 },
-        { "label": "Restaurante — vista 9", "index": 59 }
+        { "label": "Restaurante", "index": 51 }
       ]
     }
   ],
