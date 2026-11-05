@@ -3,7 +3,7 @@
 //Generated with v2026.1.2, Thu Nov 5 2026
 
 var tour;
-var devicesUrl = {"general":"script_general.js"};
+var devicesUrl = {"general":"script_general.js?v=1793897213673"};
 const hasOwn = Object.hasOwn || function (obj, prop) {
     return Object.prototype.hasOwnProperty.call(obj, prop);
 };
