@@ -1,5 +1,5 @@
 {
-  "version": "4.3.4-centro-atividades-gurupi-revisao-2026-10-30",
+  "version": "4.4.0-centro-atividades-gurupi-novas-panoramicas-2026-11-05",
   "brand": {
     "systemName": "SISTEMA FECOMÉRCIO",
     "tourName": "Centro de Atividades Sesc Gurupi - Tocantins - TOUR 360°",
@@ -68,7 +68,7 @@
       "short": "Geral",
       "title": "Geral",
       "eyebrow": "Centro de Atividades Sesc Gurupi",
-      "description": "Comece pelas vistas aéreas, fachada, hall e Central de Relacionamento da unidade.",
+      "description": "Comece pelas vistas aéreas, fachadas, entradas, hall e Central de Relacionamento da unidade.",
       "accent": "#0B78BF",
       "surface": "#DDF2FF",
       "destinations": [
@@ -79,6 +79,10 @@
         {
           "label": "Fachada principal",
           "index": 2
+        },
+        {
+          "label": "Entrada lateral",
+          "index": 125
         },
         {
           "label": "Hall de entrada",
@@ -95,8 +99,8 @@
       "number": "02",
       "short": "Esporte",
       "title": "Esporte",
-      "eyebrow": "Academia e Pilates",
-      "description": "Explore os espaços de academia e Pilates do Centro de Atividades.",
+      "eyebrow": "Academia, Pilates e piscinas",
+      "description": "Explore os espaços de academia, Pilates e piscinas do Centro de Atividades.",
       "accent": "#12A7BB",
       "surface": "#DDFBFF",
       "destinations": [
@@ -107,6 +111,10 @@
         {
           "label": "Pilates",
           "index": 48
+        },
+        {
+          "label": "Piscinas",
+          "index": 60
         }
       ]
     },
@@ -115,8 +123,8 @@
       "number": "03",
       "short": "Cultura",
       "title": "Cultura",
-      "eyebrow": "Educação, leitura, arte e experiências culturais",
-      "description": "Conheça a biblioteca, o cineteatro e a galeria de arte.",
+      "eyebrow": "Leitura, arte e experiências culturais",
+      "description": "Conheça a biblioteca, o cineteatro e a nova galeria de arte.",
       "accent": "#E88715",
       "surface": "#FFF1DD",
       "destinations": [
@@ -134,17 +142,17 @@
         },
         {
           "label": "Galeria de arte",
-          "index": 33
+          "index": 131
         }
       ]
     },
     {
       "id": "esporte",
       "number": "04",
-      "short": "Esporte",
+      "short": "Campo & Ginásio",
       "title": "Campo & Ginásio",
       "eyebrow": "Esporte, convivência e integração",
-      "description": "Percorra o campo de futebol e o ginásio da unidade.",
+      "description": "Percorra o campo de futebol e o ginásio atualizado da unidade.",
       "accent": "#43A047",
       "surface": "#E4F8E7",
       "destinations": [
@@ -154,7 +162,7 @@
         },
         {
           "label": "Ginásio",
-          "index": 40
+          "index": 122
         }
       ]
     },
@@ -162,9 +170,9 @@
       "id": "alimentacao",
       "number": "05",
       "short": "Alimentação",
-      "title": "Restaurante e lanchonete",
-      "eyebrow": "Alimentação e acolhimento",
-      "description": "Conheça o restaurante e o acesso à lanchonete do Centro de Atividades.",
+      "title": "Alimentação",
+      "eyebrow": "Restaurante e lanchonete",
+      "description": "Conheça o restaurante e a lanchonete do Centro de Atividades.",
       "accent": "#DBA900",
       "surface": "#FFF9D8",
       "destinations": [
@@ -174,7 +182,23 @@
         },
         {
           "label": "Lanchonete",
-          "index": 59
+          "index": 129
+        }
+      ]
+    },
+    {
+      "id": "educacao",
+      "number": "06",
+      "short": "Educação",
+      "title": "Educação",
+      "eyebrow": "Aprendizado e desenvolvimento",
+      "description": "Visite a escola e percorra seus ambientes de aprendizagem.",
+      "accent": "#7A4DA3",
+      "surface": "#F2E8FA",
+      "destinations": [
+        {
+          "label": "Escola",
+          "index": 68
         }
       ]
     }
@@ -539,6 +563,444 @@
       "name": "Restaurante e lanchonete — acesso",
       "group": "alimentacao",
       "thumb": "media/panorama_FCA0B1E4_F78B_3A95_41ED_235DC45B96DD_t.webp"
+    },
+    {
+      "index": 60,
+      "name": "Piscinas — vista 01",
+      "group": "bem-estar",
+      "thumb": "media/panorama_BC9F067A_AC2A_B0C9_41E3_ADFFC8F23F0D_t.webp"
+    },
+    {
+      "index": 61,
+      "name": "Piscinas — vista 02",
+      "group": "bem-estar",
+      "thumb": "media/panorama_A3CF3E78_AC2A_B0CA_41D8_A708BA04C568_t.webp"
+    },
+    {
+      "index": 62,
+      "name": "Escola — vista 01",
+      "group": "educacao",
+      "thumb": "media/panorama_A34357A7_AC25_7047_41DF_2B54BE46ACC4_t.webp"
+    },
+    {
+      "index": 63,
+      "name": "Escola — vista 02",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C1BE27_AC25_7046_41D9_4272339A0F87_t.webp"
+    },
+    {
+      "index": 64,
+      "name": "Escola — vista 03",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C16402_AC25_903E_41A3_A3F1B96D344B_t.webp"
+    },
+    {
+      "index": 65,
+      "name": "Escola — vista 04",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C1ABB2_AC25_9059_41E0_098A200551FE_t.webp"
+    },
+    {
+      "index": 66,
+      "name": "Escola — entrada coberta",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C1B355_AC25_B0DB_41C2_F3136A2E7D74_t.webp"
+    },
+    {
+      "index": 67,
+      "name": "Escola — fachada",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C1F97F_AC25_B0C6_41E2_0AE021B4BEF2_t.webp"
+    },
+    {
+      "index": 68,
+      "name": "Escola — vista externa panorâmica",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C19164_AC25_90FA_41C3_4821E6F78552_t.webp"
+    },
+    {
+      "index": 69,
+      "name": "Escola — vista 08",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C23772_AC25_90DE_41B3_BDFEE688D9AF_t.webp"
+    },
+    {
+      "index": 70,
+      "name": "Escola — vista 09",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C1EDBE_AC25_9046_41A7_686AFB5418DE_t.webp"
+    },
+    {
+      "index": 71,
+      "name": "Escola — vista 10",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C2537E_AC25_F0C9_41D4_BC4AC4CCE9AC_t.webp"
+    },
+    {
+      "index": 72,
+      "name": "Escola — vista 11",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C24934_AC25_F059_41DE_A154BD5E5597_t.webp"
+    },
+    {
+      "index": 73,
+      "name": "Escola — vista 12",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C21EDE_AC25_F1C6_41C2_D399D242BDB6_t.webp"
+    },
+    {
+      "index": 74,
+      "name": "Escola — vista 13",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C214AA_AC25_9049_4190_3A40C6DEE477_t.webp"
+    },
+    {
+      "index": 75,
+      "name": "Escola — vista 14",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C2DA65_AC25_90FA_41E1_E21380031C72_t.webp"
+    },
+    {
+      "index": 76,
+      "name": "Escola — vista 15",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C2002F_AC25_B046_41E1_827FE9B4F527_t.webp"
+    },
+    {
+      "index": 77,
+      "name": "Escola — vista 16",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C2D5DF_AC25_B3C7_41B2_38E24F7C1E78_t.webp"
+    },
+    {
+      "index": 78,
+      "name": "Escola — vista 17",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C2FB98_AC25_B04A_41C9_E4925CA7D880_t.webp"
+    },
+    {
+      "index": 79,
+      "name": "Escola — vista 18",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C29144_AC25_9039_41C1_B3A2A60E7ED8_t.webp"
+    },
+    {
+      "index": 80,
+      "name": "Escola — vista 19",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C2C84B_AC25_90CF_41CF_A729C2073E75_t.webp"
+    },
+    {
+      "index": 81,
+      "name": "Escola — vista 20",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C36E01_AC25_903B_41E4_C49FF9BD2B72_t.webp"
+    },
+    {
+      "index": 82,
+      "name": "Escola — vista 21",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C383D1_AC25_77DB_41A1_4D2C21F8EA23_t.webp"
+    },
+    {
+      "index": 83,
+      "name": "Escola — vista 22",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C3B97B_AC25_70CE_41E4_C470471EF656_t.webp"
+    },
+    {
+      "index": 84,
+      "name": "Escola — vista 23",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C34329_AC26_904B_4188_5CBEC53490AD_t.webp"
+    },
+    {
+      "index": 85,
+      "name": "Escola — vista 24",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C378D4_AC26_91D9_41DC_9549CDA498ED_t.webp"
+    },
+    {
+      "index": 86,
+      "name": "Escola — vista 25",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C31082_AC26_B039_41DB_AAE7F3C36BC7_t.webp"
+    },
+    {
+      "index": 87,
+      "name": "Escola — vista 26",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C4B630_AC26_B05A_41DE_6FE5C9643209_t.webp"
+    },
+    {
+      "index": 88,
+      "name": "Escola — vista 27",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C34BD6_AC26_B7C6_41D1_993E0E52D9AB_t.webp"
+    },
+    {
+      "index": 89,
+      "name": "Escola — vista 28",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C481A2_AC26_9079_41DF_C622AC4B7AE2_t.webp"
+    },
+    {
+      "index": 90,
+      "name": "Escola — vista 29",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C4A74A_AC26_90CE_41C7_DE063239DCD3_t.webp"
+    },
+    {
+      "index": 91,
+      "name": "Escola — vista 30",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C4CD38_AC26_904A_418B_593409B40F5A_t.webp"
+    },
+    {
+      "index": 92,
+      "name": "Escola — vista 31",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C44307_AC26_F046_41C5_3F0EC30D7461_t.webp"
+    },
+    {
+      "index": 93,
+      "name": "Escola — vista 32",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C428CF_AC26_F1C7_41DC_DF29028CF10A_t.webp"
+    },
+    {
+      "index": 94,
+      "name": "Escola — vista 33",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C41E9A_AC26_F049_41E5_5F7DE20B45B6_t.webp"
+    },
+    {
+      "index": 95,
+      "name": "Escola — vista 34",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C5C443_AC26_903E_41DD_00323E9C1BCE_t.webp"
+    },
+    {
+      "index": 96,
+      "name": "Escola — vista 35",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C5DA14_AC26_9059_41BB_62C16172578D_t.webp"
+    },
+    {
+      "index": 97,
+      "name": "Escola — vista 36",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C5B1B1_AC26_B05A_41E4_3350C1D67C9C_t.webp"
+    },
+    {
+      "index": 98,
+      "name": "Escola — vista 37",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C5C75C_AC26_B0CA_41CB_929E40D1AC43_t.webp"
+    },
+    {
+      "index": 99,
+      "name": "Escola — vista 38",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C59D06_AC26_B039_41D7_2C110EC8F233_t.webp"
+    },
+    {
+      "index": 100,
+      "name": "Escola — vista 39",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C5B2DD_AC26_91CB_41AA_AE52BE7FFB7C_t.webp"
+    },
+    {
+      "index": 101,
+      "name": "Escola — vista 40",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C56A7B_AC26_90CE_41C7_7FE76D030896_t.webp"
+    },
+    {
+      "index": 102,
+      "name": "Escola — vista 41",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C48026_AC27_7079_41BD_DA0E4E3F7FD4_t.webp"
+    },
+    {
+      "index": 103,
+      "name": "Escola — vista 42",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C4C697_AC27_7047_41D0_7EB70CB10981_t.webp"
+    },
+    {
+      "index": 104,
+      "name": "Escola — vista 43",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C4BC41_AC27_703A_41D0_52A2865FB837_t.webp"
+    },
+    {
+      "index": 105,
+      "name": "Escola — vista 44",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C701EB_AC27_93CE_41E4_6DB96698637D_t.webp"
+    },
+    {
+      "index": 106,
+      "name": "Escola — vista 45",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C4F7A6_AC27_9079_41C9_408C8BE1D721_t.webp"
+    },
+    {
+      "index": 107,
+      "name": "Escola — vista 46",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C73D40_AC27_9039_4187_77C632387408_t.webp"
+    },
+    {
+      "index": 108,
+      "name": "Escola — vista 47",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C702EA_AC27_B1C9_41CB_7FABB023A6A7_t.webp"
+    },
+    {
+      "index": 109,
+      "name": "Escola — vista 48",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C74889_AC27_B04A_41D8_79DE008146CB_t.webp"
+    },
+    {
+      "index": 110,
+      "name": "Escola — vista 49",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C71E0F_AC27_B046_41DD_47EBE326FC60_t.webp"
+    },
+    {
+      "index": 111,
+      "name": "Escola — vista 50",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C793B6_AC27_9059_41E0_C520004CAD9C_t.webp"
+    },
+    {
+      "index": 112,
+      "name": "Escola — vista 51",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C75954_AC27_90D9_41E2_D00715D54886_t.webp"
+    },
+    {
+      "index": 113,
+      "name": "Escola — vista 52",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C78EE7_AC27_91C6_41D8_394FDEA2A268_t.webp"
+    },
+    {
+      "index": 114,
+      "name": "Escola — vista 53",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C7F471_AC27_F0DB_41DF_6B2080CEE9F2_t.webp"
+    },
+    {
+      "index": 115,
+      "name": "Escola — vista 54",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C799FE_AC27_F3C9_41E0_5906D3BE7429_t.webp"
+    },
+    {
+      "index": 116,
+      "name": "Escola — vista 55",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C7FF93_AC27_F05E_41E4_DF30FF2A61A3_t.webp"
+    },
+    {
+      "index": 117,
+      "name": "Escola — vista 56",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C6552D_AC27_904B_41DD_1CF3AFCC5437_t.webp"
+    },
+    {
+      "index": 118,
+      "name": "Escola — vista 57",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C7BAC9_AC27_91CA_41E1_48D8994A6926_t.webp"
+    },
+    {
+      "index": 119,
+      "name": "Escola — vista 58",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C6506F_AC27_B0C6_41B9_F14F1239B133_t.webp"
+    },
+    {
+      "index": 120,
+      "name": "Escola — vista 59",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C67650_AC27_B0D9_41B6_9D0742A4ABAC_t.webp"
+    },
+    {
+      "index": 121,
+      "name": "Escola — vista 60",
+      "group": "educacao",
+      "thumb": "media/panorama_A3C63CA0_AC27_B07A_41AD_404A4DC20315_t.webp"
+    },
+    {
+      "index": 122,
+      "name": "Ginásio — vista atual 1",
+      "group": "esporte",
+      "thumb": "media/panorama_BCCAFA46_AC3D_B0C6_41D3_B9121B15A377_t.webp"
+    },
+    {
+      "index": 123,
+      "name": "Ginásio — vista atual 2",
+      "group": "esporte",
+      "thumb": "media/panorama_A3DDD06C_AC3D_90CA_41B7_EF6EC7BB3BA2_t.webp"
+    },
+    {
+      "index": 124,
+      "name": "Ginásio — vista atual 3",
+      "group": "esporte",
+      "thumb": "media/panorama_A3DD482C_AC3D_9049_41BE_7F44E3F23C04_t.webp"
+    },
+    {
+      "index": 125,
+      "name": "Entrada lateral — vista 01",
+      "group": "entrada",
+      "thumb": "media/panorama_A36C9980_AC3E_9039_41C1_8AB36D076D3E_t.webp"
+    },
+    {
+      "index": 126,
+      "name": "Entrada lateral — vista 02",
+      "group": "entrada",
+      "thumb": "media/panorama_A3DD5FBF_AC3E_9047_41A3_3F808C047F9C_t.webp"
+    },
+    {
+      "index": 127,
+      "name": "Entrada lateral — vista 03",
+      "group": "entrada",
+      "thumb": "media/panorama_A3DD17C6_AC3E_B039_41E0_91312D1D9888_t.webp"
+    },
+    {
+      "index": 128,
+      "name": "Entrada lateral — vista 04",
+      "group": "entrada",
+      "thumb": "media/panorama_A3DD7D7B_AC3E_B0CE_41E2_8F48AE3A8D8F_t.webp"
+    },
+    {
+      "index": 129,
+      "name": "Lanchonete",
+      "group": "alimentacao",
+      "thumb": "media/panorama_A352FD01_AC3F_903A_419E_DF080A6E13D2_t.webp"
+    },
+    {
+      "index": 130,
+      "name": "Galeria de arte — nova vista 1",
+      "group": "educacao-cultura",
+      "thumb": "media/panorama_A35E313D_AC3D_704B_41DA_A0B97953D3A3_t.webp"
+    },
+    {
+      "index": 131,
+      "name": "Galeria de arte — nova vista 2",
+      "group": "educacao-cultura",
+      "thumb": "media/panorama_A3DCCB4B_AC3D_70CF_41C4_01B8B6D80B43_t.webp"
+    },
+    {
+      "index": 132,
+      "name": "Galeria de arte — nova vista 3",
+      "group": "educacao-cultura",
+      "thumb": "media/panorama_A3DCB1B1_AC3D_905A_41D2_372A58E41B9D_t.webp"
     }
   ]
 }
