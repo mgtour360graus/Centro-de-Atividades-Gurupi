@@ -155,6 +155,20 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
 @media (orientation:landscape) and (max-height:600px){#mg360-ui.mg360-touch-device .mg360-fullscreen{display:none!important}#mg360-ui.mg360-touch-device .mg360-share{display:flex!important}#mg360-ui.mg360-touch-device .mg360-dock{left:50%;right:auto;bottom:calc(8px + var(--mg-safe-bottom));width:min(620px,calc(100% - 32px));max-width:620px;transform:translateX(-50%)}}\
 @media(max-width:900px){.mg360-intro{overflow-x:hidden}.mg360-intro:before{inset:0;transform:none}.mg360-instruction,.mg360-gesture-stage{min-width:0}.mg360-gesture-stage{overflow:hidden}.mg360-guide-mobile{width:100%;max-width:100%}}\
 @media(prefers-reduced-motion:reduce){#mg360-ui *,#mg360-ui *:before,#mg360-ui *:after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}';
+    // Replica o layout aprovado de Porto Nacional para os núcleos e destinos.
+    style.textContent += `
+#mg360-ui .mg360-destination{align-self:start}
+#mg360-ui .mg360-destination:before{top:calc(7px + .6em - 2.5px)}
+#mg360-ui .mg360-nuclei{display:flex;left:50%;right:auto;bottom:calc(110px + var(--mg-safe-bottom));transform:translateX(-50%);max-width:calc(100% - 32px);gap:22px;padding:10px 16px;border-radius:12px;background:rgba(0,56,101,.65);border:1px solid rgba(255,255,255,.3);overflow-x:auto;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.55) transparent;pointer-events:auto}
+#mg360-ui .mg360-nucleus{font-size:10px;flex-shrink:0;min-height:32px}
+#mg360-ui .mg360-nucleus:focus-visible{outline:2px solid #fff;outline-offset:4px}
+@media(max-width:900px){
+#mg360-ui .mg360-destination:before{top:calc(9px + .675em - 2.5px)}
+#mg360-ui .mg360-nuclei{bottom:calc(140px + var(--mg-safe-bottom));width:calc(100% - 24px);gap:20px;padding:10px 14px}
+}
+#mg360-ui.mg360-mobile-viewport-fix .mg360-destination:before{top:calc(9px + .675em - 2.5px)}
+#mg360-ui.mg360-mobile-viewport-fix .mg360-nuclei{bottom:calc(140px + var(--mg-safe-bottom));width:calc(100% - 24px);gap:20px;padding:10px 14px}
+`;
     document.head.appendChild(style);
 
     var root = document.createElement('div');
