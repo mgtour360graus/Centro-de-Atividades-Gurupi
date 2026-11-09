@@ -1,0 +1,4 @@
+/* Revisão 09/11: barra mobile preservada e retorno após 420 ms. */
+@media(max-width:900px){#mg360-ui .mg360-nuclei{display:flex!important;overflow-x:auto;pointer-events:auto;transition:none!important}#mg360-ui.mg360-panorama-dragging .mg360-nuclei,#mg360-ui.mg360-panorama-moving .mg360-nuclei{opacity:0!important;pointer-events:none!important}}
+#mg360-ui.mg360-mobile-viewport-fix .mg360-nuclei{display:flex!important;overflow-x:auto;pointer-events:auto;transition:none!important}
+#mg360-ui.mg360-mobile-viewport-fix.mg360-panorama-dragging .mg360-nuclei,#mg360-ui.mg360-mobile-viewport-fix.mg360-panorama-moving .mg360-nuclei{opacity:0!important;pointer-events:none!important}

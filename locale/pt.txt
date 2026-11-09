@@ -148,4 +148,4 @@ panorama_A3CF3E78_AC2A_B0CA_41D8_A708BA04C568.label = Piscinas — vista 02
 tour.description = Tour Virtual 360°
 
 ### Title
-tour.name = Centro de Atividades Gurupi
+tour.name = Centro de Atividades Sesc Gurupi
