@@ -342,23 +342,54 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
       panel.querySelector('.mg360-close').addEventListener('click', closeModal);
     }
 
+    function destinationAttributes(group, destination) {
+      return destination.service
+        ? ' data-service="' + escapeHtml(group.id) + '"'
+        : ' data-index="' + destination.index + '"';
+    }
+
+    function wireDestinationButtons(container) {
+      container.querySelectorAll('[data-index], [data-service]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          if (button.hasAttribute('data-service')) {
+            openService(groupById(button.getAttribute('data-service')));
+          } else {
+            goTo(Number(button.getAttribute('data-index')));
+          }
+        });
+      });
+    }
+
+    function openService(group) {
+      var service = group.service;
+      var panel = makeOverlay('mg360-panel', service.title);
+      panel.innerHTML = panelHeader(group.title, service.title)
+        + '<div class="mg360-panel-body mg360-info-copy"><p class="mg360-info-lead">' + escapeHtml(service.description)
+        + '</p><div class="mg360-info-actions"><a class="mg360-link-card" href="' + escapeHtml(service.website)
+        + '" target="_blank" rel="noopener noreferrer"><span class="mg360-link-icon">' + icon('external')
+        + '</span><span><small>Site oficial</small><strong>Sesc Tocantins</strong></span></a>'
+        + '<a class="mg360-link-card" href="' + escapeHtml(service.phoneUrl)
+        + '"><span class="mg360-link-icon">' + icon('phone')
+        + '</span><span><small>Clínica odontológica</small><strong>' + escapeHtml(service.phoneLabel)
+        + '</strong></span></a></div></div>';
+      wirePanelClose(panel);
+      panel.querySelector('.mg360-close').focus();
+    }
+
     function openEnvironments() {
       var panel = makeOverlay('mg360-panel mg360-panel-wide', 'Atalhos para ambientes');
       var cards = config.groups.map(function (group) {
         var destinations = group.destinations.map(function (destination) {
-          return '<button class="mg360-destination" type="button" data-index="' + destination.index + '">' + escapeHtml(destination.label) + '</button>';
+          return '<button class="mg360-destination" type="button"' + destinationAttributes(group, destination) + '>' + escapeHtml(destination.label) + '</button>';
         }).join('');
-        return '<article class="mg360-environment-card" style="--card-accent:' + group.accent + ';--card-surface:' + group.surface + '"><button class="mg360-card-title" type="button" data-index="' + group.destinations[0].index + '"><b>' + escapeHtml(group.number) + '</b><span>' + escapeHtml(group.title) + '</span><span>→</span></button><div class="mg360-destinations">' + destinations + '</div></article>';
+        return '<article class="mg360-environment-card" style="--card-accent:' + group.accent + ';--card-surface:' + group.surface + '"><button class="mg360-card-title" type="button"' + destinationAttributes(group, group.destinations[0]) + '><b>' + escapeHtml(group.number) + '</b><span>' + escapeHtml(group.title) + '</span><span>→</span></button><div class="mg360-destinations">' + destinations + '</div></article>';
       }).join('');
       var sceneCards = config.scenes.map(function (scene) {
         return '<button class="mg360-scene-card" type="button" data-index="' + scene.index + '" data-search="' + escapeHtml(scene.name.toLowerCase()) + '"><img src="' + escapeHtml(scene.thumb) + '" alt="" loading="lazy"><span>' + escapeHtml(scene.name) + '</span></button>';
       }).join('');
       panel.innerHTML = panelHeader('Navegação rápida', 'Para onde vamos?') + '<div class="mg360-panel-body"><div class="mg360-environment-grid">' + cards + '</div><details class="mg360-scene-browser"><summary>Ver todas as ' + config.scenes.length + ' panorâmicas</summary><div class="mg360-scene-tools"><input class="mg360-scene-search" type="search" placeholder="Buscar uma panorâmica" aria-label="Buscar panorâmica"></div><div class="mg360-scene-grid">' + sceneCards + '</div></details></div>';
       wirePanelClose(panel);
-      var navigationButtons = panel.querySelectorAll('[data-index]');
-      for (var i = 0; i < navigationButtons.length; i += 1) {
-        navigationButtons[i].addEventListener('click', function () { goTo(Number(this.getAttribute('data-index'))); });
-      }
+      wireDestinationButtons(panel);
       var search = panel.querySelector('.mg360-scene-search');
       search.addEventListener('input', function () {
         var query = this.value.toLowerCase().trim();
@@ -488,12 +519,9 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
 
     function buildNuclei() {
       refs.nuclei.innerHTML = config.groups.map(function (group) {
-        return '<button class="mg360-nucleus" type="button" data-group="' + escapeHtml(group.id) + '" data-index="' + group.destinations[0].index + '">' + escapeHtml(group.short) + '</button>';
+        return '<button class="mg360-nucleus" type="button" data-group="' + escapeHtml(group.id) + '"' + destinationAttributes(group, group.destinations[0]) + '>' + escapeHtml(group.short) + '</button>';
       }).join('');
-      var buttons = refs.nuclei.querySelectorAll('button');
-      for (var i = 0; i < buttons.length; i += 1) {
-        buttons[i].addEventListener('click', function () { goTo(Number(this.getAttribute('data-index'))); });
-      }
+      wireDestinationButtons(refs.nuclei);
     }
 
     function showIntro() {
@@ -505,7 +533,7 @@ html,body{height:100%;height:-webkit-fill-available}body.mg360-modal-open{oversc
       intro.style.backgroundImage = 'url("' + config.intro.background.replace(/"/g, '') + '")';
       var desktopGuide = config.intro.desktopGuide || 'skin-fecomercio/assets/mouse-desktop.apng.png';
       var mobileGuide = config.intro.mobileGuide || 'skin-fecomercio/assets/gestos-mobile.apng.png';
-      intro.innerHTML = '<div class="mg360-intro-card"><button class="mg360-intro-skip" type="button">Pular</button><div class="mg360-intro-head"><img class="mg360-intro-logo" src="' + escapeHtml(config.brand.logo) + '" alt="Sesc Fecomércio Senac"><div><div class="mg360-intro-badge"><b>360°</b><span>VISITA VIRTUAL</span></div><h1>' + escapeHtml(config.intro.title) + '</h1><p class="mg360-intro-description">' + escapeHtml(config.intro.description) + '</p></div></div><div class="mg360-instructions" aria-label="Como navegar no tour"><article class="mg360-instruction"><div class="mg360-gesture-stage"><img class="mg360-guide-media mg360-guide-desktop" src="' + escapeHtml(desktopGuide) + '" alt="Movimento do mouse para navegar no tour"></div><div class="mg360-instruction-copy"><small>No computador</small><strong>Arraste para explorar</strong><span>Segure o mouse e mova para olhar ao redor.</span></div></article><article class="mg360-instruction"><div class="mg360-gesture-stage"><img class="mg360-guide-media mg360-guide-mobile" src="' + escapeHtml(mobileGuide) + '" alt="Gesto de pinça para navegar no celular"></div><div class="mg360-instruction-copy"><small>No celular</small><strong>Use os dedos</strong><span>Arraste para girar e faça a pinça para aproximar.</span></div></article></div><div class="mg360-hotspot-tip"><b>+</b><span><strong>Toque nos pontos interativos</strong> para avançar e abrir informações.</span></div><button class="mg360-start" type="button">Começar a visita ' + icon('arrow') + '</button><small class="mg360-optimized">Experiência otimizada para computador, celular e tablet</small></div>';
+      intro.innerHTML = '<div class="mg360-intro-card"><button class="mg360-intro-skip" type="button">Pular</button><div class="mg360-intro-head"><img class="mg360-intro-logo" src="' + escapeHtml(config.brand.logo) + '" alt="Sesc Fecomércio Senac"><div><div class="mg360-intro-badge"><b>360°</b><span>VISITA VIRTUAL</span></div><h1>' + escapeHtml(config.intro.title) + '</h1><p class="mg360-intro-description">' + escapeHtml(config.intro.description) + '</p></div></div><div class="mg360-instructions" aria-label="Como navegar no tour"><article class="mg360-instruction"><div class="mg360-gesture-stage"><img class="mg360-guide-media mg360-guide-desktop" src="' + escapeHtml(desktopGuide) + '" alt="Movimento do mouse para navegar no tour"></div><div class="mg360-instruction-copy"><small>No computador</small><strong>Arraste para explorar</strong><span>Segure o mouse e mova para olhar ao redor.</span></div></article><article class="mg360-instruction"><div class="mg360-gesture-stage"><img class="mg360-guide-media mg360-guide-mobile" src="' + escapeHtml(mobileGuide) + '" alt="Gesto de pinça para navegar no celular"></div><div class="mg360-instruction-copy"><small>No celular</small><strong>Use os dedos</strong><span>Arraste para girar e faça a pinça para aproximar.</span></div></article></div><div class="mg360-hotspot-tip"><b>+</b><span><strong>Toque nos pontos interativos</strong> para avançar e abrir informações.</span></div><button class="mg360-start" type="button">Começar a visita ' + icon('arrow') + '</button><small class="mg360-optimized">Experiência otimizada para computador, celular e tablet</small><small class="mg360-layout-credit">© 2026 MG Tour 360°. Direitos reservados ao layout.</small></div>';
       root.appendChild(intro);
       document.body.classList.add('mg360-modal-open');
       function dismissIntro() {

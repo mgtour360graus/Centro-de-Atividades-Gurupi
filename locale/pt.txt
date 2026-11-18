@@ -1,5 +1,10 @@
 #: locale=pt
 
+## Action
+
+### URL
+LinkBehaviour_FECAF6CF_EC48_5442_41E6_4FC8C5E5C6F6.source = https://mgtour360.com.br/
+
 ## Media
 
 ### Audio
@@ -141,6 +146,11 @@ panorama_A3DD482C_AC3D_9049_41BE_7F44E3F23C04.label = Ginásio — vista atual 3
 panorama_A352FD01_AC3F_903A_419E_DF080A6E13D2.label = Lanchonete
 panorama_BC9F067A_AC2A_B0C9_41E3_ADFFC8F23F0D.label = Piscinas — vista 01
 panorama_A3CF3E78_AC2A_B0CA_41D8_A708BA04C568.label = Piscinas — vista 02
+
+## Right Click Menu
+
+### Text
+menuItem_FD24A97C_EC4B_BC45_41E6_062D5BB0AE9B.label = DESENVOLVIDO POR MG TOUR 360 GRAUS 
 
 ## Tour
 

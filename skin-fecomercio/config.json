@@ -123,16 +123,23 @@
       "number": "04",
       "short": "Saúde",
       "title": "Saúde",
-      "eyebrow": "Academia, Pilates e piscinas",
-      "description": "Conheça o espaço de Pilates da unidade.",
+      "eyebrow": "Odontologia",
+      "description": "Informações sobre a clínica odontológica do Centro de Atividades Sesc Gurupi.",
       "accent": "#12A7BB",
       "surface": "#DDFBFF",
       "destinations": [
         {
-          "label": "Pilates",
-          "index": 48
+          "label": "Odontologia",
+          "service": true
         }
-      ]
+      ],
+      "service": {
+        "title": "Odontologia",
+        "phoneUrl": "tel:+556333012123",
+        "phoneLabel": "(63) 3301-2123",
+        "website": "https://www.sescto.com.br/area-coordenacao/3",
+        "description": "Consulte a Clínica Odontológica do Centro de Atividades Sesc Gurupi para informações e agendamento."
+      }
     },
     {
       "id": "cultura",
@@ -168,13 +175,17 @@
       "short": "Lazer/Esporte",
       "title": "Lazer/Esporte",
       "eyebrow": "Academia, Pilates e piscinas",
-      "description": "Academia, piscinas, campo de futebol e ginásio.",
+      "description": "Academia, Pilates, piscinas, campo de futebol e ginásio.",
       "accent": "#12A7BB",
       "surface": "#DDFBFF",
       "destinations": [
         {
           "label": "Academia",
           "index": 3
+        },
+        {
+          "label": "Pilates",
+          "index": 48
         },
         {
           "label": "Piscinas",
@@ -519,13 +530,13 @@
     {
       "index": 48,
       "name": "Pilates — vista 1",
-      "group": "saude",
+      "group": "lazer-esporte",
       "thumb": "media/panorama_FCA08910_F788_EB8E_41B2_C8B79BC9146C_t.webp"
     },
     {
       "index": 49,
       "name": "Pilates — vista 2",
-      "group": "saude",
+      "group": "lazer-esporte",
       "thumb": "media/panorama_FCA0BF50_F788_E78D_41CC_D241FC7656C7_t.webp"
     },
     {
